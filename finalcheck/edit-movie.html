@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Edit Movie</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<header>
+			<span class="logo-name">Movie Cruiser</span>
+			<img src="images/logo.png" class="logo-image">
+			<a href="movie-list-admin.html" class="edit-movie-link">Movies</a>
+		</header>
+		<article>
+			
+			
+			<h1 class="table-head">Edit Movie</h1>
+			<form class="edit-movie-form">
+				<label for="name">Title</label><br>
+				<input type="text" id="name" name="title" onkeyup="titleValidation()"><br>
+				<span id="title-validation"></span><br><br>
+				<label for="gross" >Gross ($)</label>
+				<label for="inStock" class="in-stock">Active</label>
+				<label for="dateOfLaunch" class="date-of-launch">Date of Launch</label>
+				<label for="genre" class="genre">Genre</label><br>
+				<input type="text" id="gross" name="gross" class="gross-input">
+				<input type="radio" name="inStock" value="Yes" id="yes"class="radio-button" class="in-stock-input" checked="true">
+				<label for="yes" class="radio-label">Yes</label>
+				<input type="radio" name="inStock" value="No" id="no"class="radio-button" class="in-stock-input">
+				<label for="no" class="radio-label">No</label>
+				<input type="date" id="dateOfLaunch" name="dateOfLaunch" class="date-of-launch-input">
+				<select id="genre" class="genre-input">
+					<option></option>
+					<option>Science Fiction</option>
+					<option>Superhero</option>
+					<option>Romance</option>
+					<option>Comedy</option>
+					<option>Adventure</option>
+					<option>Thriller</option>
+				</select>
+				<br>
+				<span id="gross-validation" class="gross-input-valid" onkeyup="grossValidation()"></span>	
+				<span id="date-of-launch-validation" class="date-of-launch-input-valid" onkeyup="dateOfLaunch()"></span>
+				<span id="genre-validation" class="genre-input-valid"></span>	
+				<br>
+				<input type="checkbox" value="free" name="hasTeaser" id="hasTeaser" checked="true">
+				<label for="hasTeaser">Has Teaser</label>
+				<br><br>
+				<input type="submit" name="submit" value="Save" id="submit" onclick="validate()">
+			</form>
+		</article>
+		<footer>
+			<p class="footer-text">Copyright &copy; 2019</p>
+		</footer>
+	</body>
+</html>
